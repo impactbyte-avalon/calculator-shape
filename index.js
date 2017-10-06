@@ -27,7 +27,7 @@ console.log(squareParameter(55));
 
 
 function circleArea(x) { // luas lingkaran
-  return 3.14 * (x / 2) ^ 2;
+  return 3.14 * (x ** 2);
 }
 
 console.log(circleArea(50));
@@ -46,7 +46,7 @@ console.log(tubeArea(5, 4));
 
 function tubeVolume(x, y) { //volume tabung
 
-  return 3.14 * x ^ 2 * y;
+  return 3.14 * x ** 2 * y;
 }
 console.log(tubeVolume(10, 20));
 
@@ -56,6 +56,6 @@ var result = squareArea(8)
 
 console.log(result + tubeArea(5, 4));
 
-var result = circleArea(10)
+var result2 = circleArea(10)
 
-console.log(result);
+console.log( result2);
