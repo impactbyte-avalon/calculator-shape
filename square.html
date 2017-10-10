@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+</head>
+<body>
+<h1>Square </h1>
+    <form>
+      <label for="WidthSquare">Width: </label>
+      <input id="WidthSquare"> <br>
+    
+      <label for="LengthSquare">Length: </label>
+      <input id="LengthSquare"> <br>
+
+      <label for="answerAreaSquare">Area: </label>
+      <output id="answerAreaSquare"></output> <br>
+      
+      <label for="answerPerimeterSquare">Perimeter: </label>
+      <output id="answerPerimeterSquare"></output> <br>
+
+      <input type="submit" value="Submit">
+    </form>
+<script>
+(function () {
+  function Square(event) {
+    var Width = document.getElementById("WidthSquare").value;
+    var Length = document.getElementById("LengthSquare").value;
+    var answerArea = Width*Width;
+    var answerPerimeter = Width * 2 + Length * 2;
+    document.getElementById("answerAreaSquare").value = answerArea;
+    event.preventDefault();
+    document.getElementById("answerPerimeterSquare").value = answerPerimeter;
+    event.preventDefault();
+  }
+
+  // Event handler bound with JS instead of HTML
+  document.querySelector('form').addEventListener('submit', Square);
+})();
+  </script>
+
+</body>
+</html>
