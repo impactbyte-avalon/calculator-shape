@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+</head>
+<body>
+<h1>Cube </h1>
+    <form>
+      <label for="WidthCube">Width: </label>
+      <input id="WidthCube"> <br>
+    
+      <label for="LengthCube">Length: </label>
+      <input id="LengthCube"> <br>
+
+      <label for="HeightCube">Height: </label>
+      <input id="HeightCube"> <br>
+
+      <label for="answerAreaCube">Area: </label>
+      <output id="answerAreaCube"></output> <br>
+      
+      <label for="answerVolumeCube">Volume: </label>
+      <output id="answerVolumeCube"></output> <br>
+
+      <input type="submit" value="Submit">
+    </form>
+<script>
+(function () {
+  function Cube(event) {
+    var Width = document.getElementById("WidthCube").value;
+    var Length = document.getElementById("LengthCube").value;
+    var Height = document.getElementById("HeightCube").value;
+    var answerArea = Width*Length;
+    var answerVolume = Width *  Length * Height;
+    document.getElementById("answerAreaCube").value = answerArea;
+    event.preventDefault();
+    document.getElementById("answerVolumeCube").value = answerVolume;
+    event.preventDefault();
+  }
+
+  document.querySelector('form').addEventListener('submit', Cube);
+})();
+  </script>
+
+</body>
+</html>
